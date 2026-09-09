@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import { ArrowDown } from "lucide-react"
-import { site, stats } from "@/lib/site-data"
+import { site, stats, images } from "@/lib/site-data"
 import { useBooking } from "@/components/booking-provider"
 
 export function Hero() {
@@ -11,7 +11,7 @@ export function Hero() {
   return (
     <section id="top" className="relative flex min-h-[100svh] flex-col justify-end overflow-hidden">
       <Image
-        src="/images/hero-house.jpg"
+        src={images.hero}
         alt="Современная резиденция Малое Исаково в лесу на берегу Истринского водохранилища"
         fill
         priority

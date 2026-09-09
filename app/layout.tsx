@@ -24,13 +24,40 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://m-isakovo.ru',
   },
+  keywords: [
+    'Малое Исаково',
+    'клубный посёлок',
+    'Истринское водохранилище',
+    'резиденции комфорт-класса',
+    'дом у воды',
+    'Солнечногорский район',
+    'коттеджный посёлок Подмосковье',
+    'Истра Строй Сервис',
+  ],
+  authors: [{ name: 'Истра Строй Сервис' }],
   openGraph: {
     title: 'Малое Исаково — Твоё маленькое счастье',
     description:
       'Современные резиденции комфорт-класса в лесу на берегу Истринского водохранилища. Более 30 резиденций, 45 минут от Москвы.',
     url: 'https://m-isakovo.ru',
+    siteName: 'Малое Исаково',
     type: 'website',
     locale: 'ru_RU',
+    images: [
+      {
+        url: '/projects/maloe-isakovo/hero-cover-high-quality.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Резиденция в посёлке Малое Исаково на Истринском водохранилище',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Малое Исаково — Твоё маленькое счастье',
+    description:
+      'Резиденции комфорт-класса в лесу на берегу Истринского водохранилища, 45 минут от Москвы.',
+    images: ['/projects/maloe-isakovo/hero-cover-high-quality.jpg'],
   },
 }
 

@@ -1,7 +1,8 @@
 import Image from "next/image"
 import { Reveal } from "@/components/reveal"
+import { images } from "@/lib/site-data"
 
-const materials = ["Натуральное дерево", "Бетон", "Камень", "Металл", "Панорамное остекление"]
+const materials = ["Эко-минимализм", "Кирпич / гибкая керамика", "Панорамное остекление", "Большие террасы", "Единый стиль улиц"]
 
 export function Architecture() {
   return (
@@ -30,8 +31,8 @@ export function Architecture() {
 
       <Reveal variant="image" className="mt-14 overflow-hidden rounded-lg">
         <Image
-          src="/images/architecture-street.webp"
-          alt="Улица современных резиденций Малое Исаково"
+          src={images.architectureStreet}
+          alt="Улица посёлка Малое Исаково в едином стиле эко-минимализма"
           width={1600}
           height={900}
           sizes="100vw"
