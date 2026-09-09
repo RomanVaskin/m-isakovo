@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { Reveal } from "@/components/reveal"
+import { locationMap } from "@/lib/site-data"
 
 const facts = [
   { label: "До Москвы", value: "45 минут" },
@@ -41,7 +42,7 @@ export function Location() {
           <div className="md:col-span-7">
             <Reveal variant="image" className="relative aspect-square overflow-hidden rounded-lg border border-border bg-secondary md:aspect-4/3">
               <Image
-                src="/images/location-map.webp"
+                src={locationMap}
                 alt="Схема расположения посёлка Малое Исаково на Истринском водохранилище"
                 fill
                 sizes="(max-width: 768px) 100vw, 58vw"

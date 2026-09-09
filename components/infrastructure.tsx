@@ -14,39 +14,64 @@ export function Infrastructure() {
           delay={80}
           className="mt-6 text-balance font-display text-3xl font-medium leading-tight tracking-tight text-foreground sm:text-4xl md:text-5xl"
         >
-          Экосистема вашего комфорта
+          Клубная и детская инфраструктура
         </Reveal>
       </div>
 
-      <div className="mt-14 grid gap-8 lg:grid-cols-12 lg:gap-10">
-        <Reveal variant="image" className="overflow-hidden rounded-lg lg:col-span-7">
-          <Image
-            src="/images/club-complex.webp"
-            alt="Клубный комплекс посёлка Малое Исаково"
-            width={1200}
-            height={900}
-            sizes="(max-width: 1024px) 100vw, 58vw"
-            className="h-full w-full object-cover"
-          />
-        </Reveal>
-
-        <div className="flex flex-col justify-center gap-px lg:col-span-5">
-          {ecosystem.map((e, i) => (
-            <Reveal
-              key={e.title}
-              delay={i * 100}
-              className="border-t border-border py-8 first:border-t-0 first:pt-0"
-            >
+      <div className="mt-14 grid gap-6 md:grid-cols-2">
+        {ecosystem.map((e, i) => (
+          <Reveal
+            key={e.title}
+            variant="image"
+            delay={i * 120}
+            className="overflow-hidden rounded-lg border border-border bg-card"
+          >
+            <div className="relative aspect-4/3">
+              <Image
+                src={e.image}
+                alt={e.alt}
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover"
+              />
+            </div>
+            <div className="p-7 sm:p-8">
               <h3 className="font-display text-2xl font-medium text-foreground">{e.title}</h3>
               <p className="mt-3 text-pretty leading-relaxed text-muted-foreground">{e.text}</p>
+            </div>
+          </Reveal>
+        ))}
+      </div>
+
+      <div className="mt-16 border-t border-border pt-12">
+        <Reveal
+          as="h3"
+          className="font-display text-2xl font-medium tracking-tight text-foreground md:text-3xl"
+        >
+          Ландшафтный парк и прогулочные зоны
+        </Reveal>
+        <Reveal
+          as="p"
+          delay={80}
+          className="mt-4 max-w-2xl text-pretty leading-relaxed text-muted-foreground"
+        >
+          Пятая зона генерального плана объединяет прогулочные пространства среди леса и у воды.
+        </Reveal>
+        <div className="mt-8 grid gap-4 sm:grid-cols-3">
+          {[
+            ["/projects/maloe-isakovo/forest-water.webp", "Лес и вода рядом с посёлком"],
+            ["/projects/maloe-isakovo/infrastructure-1.webp", "Прогулочная зона посёлка"],
+            ["/projects/maloe-isakovo/infrastructure-2.webp", "Благоустроенная территория"],
+          ].map(([src, alt], i) => (
+            <Reveal
+              key={src}
+              variant="image"
+              delay={i * 90}
+              className="relative aspect-4/3 overflow-hidden rounded-lg"
+            >
+              <Image src={src} alt={alt} fill sizes="(max-width: 640px) 100vw, 33vw" className="object-cover" />
             </Reveal>
           ))}
-          <Reveal delay={220} className="border-t border-border py-8">
-            <h3 className="font-display text-2xl font-medium text-foreground">Ландшафтный парк</h3>
-            <p className="mt-3 text-pretty leading-relaxed text-muted-foreground">
-              Отдельная зелёная зона внутри посёлка для прогулок и отдыха на природе.
-            </p>
-          </Reveal>
         </div>
       </div>
     </section>

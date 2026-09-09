@@ -1,13 +1,14 @@
 import Image from "next/image"
 import { Reveal } from "@/components/reveal"
 import { CtaButton } from "@/components/cta-button"
+import { images } from "@/lib/site-data"
 
 export function FinalCta() {
   return (
     <section className="relative overflow-hidden">
       <div className="relative min-h-[70vh] w-full">
         <Image
-          src="/images/final-cta.webp"
+          src={images.finalCta}
           alt="Крытая терраса резиденции Малое Исаково с видом на лес"
           fill
           sizes="100vw"

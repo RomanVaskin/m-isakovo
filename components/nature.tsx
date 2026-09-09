@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { Reveal } from "@/components/reveal"
-import { naturePoints } from "@/lib/site-data"
+import { naturePoints, images } from "@/lib/site-data"
 
 export function Nature() {
   return (
@@ -8,7 +8,7 @@ export function Nature() {
       <div className="grid md:grid-cols-2">
         <div className="relative min-h-[60vh] overflow-hidden md:min-h-full">
           <Image
-            src="/images/nature-water.webp"
+            src={images.natureWater}
             alt="Истринское водохранилище в окружении леса на рассвете"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"

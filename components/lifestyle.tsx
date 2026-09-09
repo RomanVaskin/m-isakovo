@@ -1,12 +1,13 @@
 import Image from "next/image"
 import { Reveal } from "@/components/reveal"
+import { images } from "@/lib/site-data"
 
 export function Lifestyle() {
   return (
     <section className="relative overflow-hidden">
       <div className="relative min-h-[80vh] w-full">
         <Image
-          src="/images/lifestyle-terrace.webp"
+          src={images.lifestyle}
           alt="Терраса резиденции с зоной отдыха на закате"
           fill
           sizes="100vw"

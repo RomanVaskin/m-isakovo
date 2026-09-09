@@ -8,6 +8,7 @@ import { Houses } from "@/components/houses"
 import { MasterPlan } from "@/components/master-plan"
 import { Infrastructure } from "@/components/infrastructure"
 import { ShellSpec } from "@/components/shell-spec"
+import { FacadeMaterials } from "@/components/facade-materials"
 import { Lifestyle } from "@/components/lifestyle"
 import { Gallery } from "@/components/gallery"
 import { Location } from "@/components/location"
@@ -28,6 +29,7 @@ export default function Page() {
         <MasterPlan />
         <Infrastructure />
         <ShellSpec />
+        <FacadeMaterials />
         <Lifestyle />
         <Gallery />
         <Location />

@@ -1,13 +1,24 @@
+// Все факты, тексты, цифры, площади и пути к материалам взяты из
+// production-страницы проекта «Малое Исаково» (репозиторий a-istra, ветка
+// v0-maloe-isakovo-export, src/routes/projects.maloe-isakovo.tsx) — она
+// восстановлена из презентации проекта и является source of truth.
+// Дизайн-оболочка — из проекта m-isakovo.
+
+const IMG = "/projects/maloe-isakovo"
+
 export const site = {
   name: "Малое Исаково",
   developer: "Истра Строй Сервис",
   domain: "m-isakovo.ru",
   tagline: "Твоё маленькое счастье",
   subtitle: "Доступные резиденции комфорт-класса на Истринском водохранилище",
-  phone: "+7 (495) 000-00-00",
+  phone: "+7 985 007-27-27",
   email: "info@a-istra.ru",
-  address: "Московская область, городской округ Солнечногорск, деревня Лопотово, КП «Акватория Истры», офис продаж",
+  address:
+    "Московская область, городской округ Солнечногорск, деревня Лопотово, КП «Акватория Истры», офис продаж",
 }
+
+export const phones = ["+7 985 007-27-27", "+7 916 261-08-80"]
 
 export const stats = [
   { value: "45", unit: "минут", label: "до Москвы" },
@@ -44,7 +55,7 @@ export const naturePoints = [
 ]
 
 // Три резиденции из презентации проекта — единственные документально
-// подтверждённые типы домов (src/routes/projects.maloe-isakovo.tsx в a-istra).
+// подтверждённые типы домов.
 export const residences = [
   {
     id: "nice",
@@ -54,8 +65,8 @@ export const residences = [
     warmPrice: "16 млн ₽",
     finishPrice: "19 млн ₽",
     description: "Просторная кухня-гостиная (30,8 м²) и открытая терраса (13,7 м²) для летних ужинов.",
-    images: ["/images/residence-nice-1.webp", "/images/residence-nice-2.webp"],
-    plan: "/images/residence-nice-plan.webp",
+    images: [`${IMG}/nice-1.webp`, `${IMG}/nice-2.webp`],
+    plan: `${IMG}/nice-plan.webp`,
     rooms: [
       "Прихожая — 7,7 м²",
       "Коридор — 9,4 м²",
@@ -75,8 +86,8 @@ export const residences = [
     warmPrice: "21 млн ₽",
     finishPrice: "25 млн ₽",
     description: "Роскошная кухня-гостиная (42 м²) с панорамными видами и приватная мастер-спальня.",
-    images: ["/images/residence-provence-1.webp", "/images/residence-provence-2.webp"],
-    plan: "/images/residence-provence-plan.webp",
+    images: [`${IMG}/provence-1.webp`, `${IMG}/provence-2.webp`],
+    plan: `${IMG}/provence-plan.webp`,
     rooms: [
       "Прихожая — 6,5 м²",
       "Коридор — 21 м²",
@@ -96,8 +107,8 @@ export const residences = [
     warmPrice: "30 млн ₽",
     finishPrice: "35 млн ₽",
     description: "Раздельные кухня-столовая и гостиная, гранд-терраса (33 м²) для масштабных приёмов.",
-    images: ["/images/residence-milan-1.webp", "/images/residence-milan-2.webp"],
-    plan: "/images/residence-milan-plan.webp",
+    images: [`${IMG}/milan-1.webp`, `${IMG}/milan-2.webp`],
+    plan: `${IMG}/milan-plan.webp`,
     rooms: [
       "Прихожая — 13,3 м²",
       "Коридор — 12,7 м²",
@@ -121,19 +132,39 @@ export const masterPlanPhases = [
   { id: "5", title: "Ландшафтный парк", type: "amenity" },
 ]
 
+// Два варианта фасадных решений комплектации «Предчистовая».
+export const facadeOptions = [
+  {
+    id: "brick",
+    title: "Облицовочный керамический кирпич",
+    text: "Традиционный строительный материал для наружной отделки. Надёжность, проверенная временем, и монументальность.",
+    images: [`${IMG}/pdf/facade-option-1-brick-a.webp`, `${IMG}/pdf/facade-option-1-brick-b.webp`],
+  },
+  {
+    id: "phomi",
+    title: "Гибкая керамика Phomi",
+    text: "Технологичное покрытие нового поколения. Лёгкость, экологичность и безупречный современный стиль.",
+    images: [`${IMG}/pdf/facade-option-2-phomi-a.webp`, `${IMG}/pdf/facade-option-2-phomi-b.webp`],
+  },
+]
+
 export const ecosystem = [
   {
     title: "Клубный комплекс",
     text: "Центр притяжения резидентов с авторским кафетерием и фитнесом.",
+    image: `${IMG}/pdf/club-house.webp`,
+    alt: "Проект клубного комплекса с кафетерием и фитнесом",
   },
   {
     title: "Для детей",
     text: "Современный детский и спортивный клуб, образовательные программы.",
+    image: `${IMG}/pdf/children-club.webp`,
+    alt: "Проект детского и спортивного клуба",
   },
 ]
 
-// Комплектации «Тёплый контур» и «Предчистовая» из презентации: у каждой свой
-// состав работ по дому, коммуникации и ограждения — общие для обеих.
+// Комплектации «Тёплый контур» и «Предчистовая»: у каждой свой состав работ по
+// дому, коммуникации, ограждения и благоустройство — общие для обеих.
 export const shellSpec = [
   {
     group: "Дом · «Тёплый контур»",
@@ -191,11 +222,25 @@ export const purchaseOptions = [
   },
 ]
 
+export const locationMap = `${IMG}/location-map.webp`
+
 export const gallery = [
-  { src: "/images/final-cta.webp", alt: "Крытая терраса резиденции с видом на лес", span: "wide" },
-  { src: "/images/gallery-entrance.webp", alt: "Въездная группа посёлка Малое Исаково", span: "tall" },
-  { src: "/images/gallery-facade.webp", alt: "Деталь фасада: гибкая керамика Phomi", span: "" },
-  { src: "/images/lifestyle-terrace.webp", alt: "Терраса с зоной отдыха на закате", span: "" },
-  { src: "/images/gallery-infrastructure-2.webp", alt: "Благоустроенная территория посёлка", span: "tall" },
-  { src: "/images/nature-water.webp", alt: "Истринское водохранилище в окружении леса", span: "wide" },
+  { src: `${IMG}/forest-water.webp`, alt: "Истринское водохранилище в окружении леса", span: "wide" },
+  { src: `${IMG}/village-street.webp`, alt: "Улица посёлка Малое Исаково в едином стиле", span: "tall" },
+  { src: `${IMG}/pdf/facade-option-2-phomi-a.webp`, alt: "Деталь фасада: гибкая керамика Phomi", span: "" },
+  { src: `${IMG}/pdf/architecture-terrace.webp`, alt: "Архитектурная концепция террасы резиденции", span: "" },
+  { src: `${IMG}/infrastructure-2.webp`, alt: "Благоустроенная территория посёлка", span: "tall" },
+  { src: `${IMG}/residences-hero.webp`, alt: "Резиденции Малое Исаково среди леса", span: "wide" },
 ]
+
+export const images = {
+  hero: `${IMG}/hero-cover-high-quality.jpg`,
+  natureWater: `${IMG}/forest-water.webp`,
+  architectureStreet: `${IMG}/pdf/neighborhood-street.webp`,
+  architectureTerrace: `${IMG}/pdf/architecture-terrace.webp`,
+  masterplan: `${IMG}/pdf/masterplan-current.webp`,
+  residenceFacade: `${IMG}/pdf/residence-facade.webp`,
+  lifestyle: `${IMG}/pdf/architecture-terrace.webp`,
+  finalCta: `${IMG}/residences-hero.webp`,
+  office: "/images/contacts/office-sales-maloe-isakovo.webp",
+}

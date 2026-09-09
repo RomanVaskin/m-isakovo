@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { Reveal } from "@/components/reveal"
-import { masterPlanPhases } from "@/lib/site-data"
+import { masterPlanPhases, images } from "@/lib/site-data"
 
 export function MasterPlan() {
   return (
@@ -23,17 +23,25 @@ export function MasterPlan() {
           </Reveal>
         </div>
 
-        <Reveal variant="image" delay={160} className="mt-14 overflow-hidden rounded-lg">
-          <div className="relative aspect-4/3 sm:aspect-video">
-            <Image
-              src="/images/masterplan-aerial.webp"
-              alt="Генеральный план посёлка Малое Исаково с пятью обозначенными зонами"
-              fill
-              sizes="100vw"
-              className="object-cover"
-            />
-          </div>
+        <Reveal variant="image" delay={160} className="mt-14 overflow-hidden rounded-lg border border-background/15 bg-background">
+          <Image
+            src={images.masterplan}
+            alt="Генеральный план посёлка Малое Исаково с пятью обозначенными зонами"
+            width={1600}
+            height={1131}
+            sizes="100vw"
+            className="h-auto w-full object-contain"
+          />
         </Reveal>
+
+        <a
+          href={images.masterplan}
+          target="_blank"
+          rel="noreferrer"
+          className="mt-6 inline-flex items-center gap-2 rounded-md border border-background/25 px-5 py-2.5 text-sm font-medium text-background transition-colors hover:bg-background/10"
+        >
+          Открыть генеральный план в полном размере
+        </a>
 
         <ol className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
           {masterPlanPhases.map((p, i) => (

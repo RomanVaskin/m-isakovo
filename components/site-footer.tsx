@@ -1,4 +1,4 @@
-import { nav, site } from "@/lib/site-data"
+import { nav, site, phones } from "@/lib/site-data"
 
 export function SiteFooter() {
   return (
@@ -32,11 +32,13 @@ export function SiteFooter() {
           <div className="md:col-span-4">
             <p className="text-xs uppercase tracking-wider text-background/50">Контакты</p>
             <ul className="mt-5 flex flex-col gap-3 text-sm text-background/80">
-              <li>
-                <a href={`tel:${site.phone.replace(/[^+\d]/g, "")}`} className="transition-colors hover:text-background">
-                  {site.phone}
-                </a>
-              </li>
+              {phones.map((phone) => (
+                <li key={phone}>
+                  <a href={`tel:${phone.replace(/[^+\d]/g, "")}`} className="transition-colors hover:text-background">
+                    {phone}
+                  </a>
+                </li>
+              ))}
               <li>
                 <a href={`mailto:${site.email}`} className="transition-colors hover:text-background">
                   {site.email}
