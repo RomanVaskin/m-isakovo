@@ -13,6 +13,7 @@ import { Lifestyle } from "@/components/lifestyle"
 import { Gallery } from "@/components/gallery"
 import { Location } from "@/components/location"
 import { Purchase } from "@/components/purchase"
+import { Developer } from "@/components/developer"
 import { FinalCta } from "@/components/final-cta"
 import { SiteFooter } from "@/components/site-footer"
 
@@ -34,6 +35,7 @@ export default function Page() {
         <Gallery />
         <Location />
         <Purchase />
+        <Developer />
         <FinalCta />
       </main>
       <SiteFooter />
