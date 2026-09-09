@@ -11,7 +11,7 @@ export function Hero() {
   return (
     <section id="top" className="relative flex min-h-[100svh] flex-col justify-end overflow-hidden">
       <Image
-        src="/images/hero-house.png"
+        src="/images/hero-house.jpg"
         alt="Современная резиденция Малое Исаково в лесу на берегу Истринского водохранилища"
         fill
         priority

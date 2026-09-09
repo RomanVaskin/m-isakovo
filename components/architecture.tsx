@@ -30,7 +30,7 @@ export function Architecture() {
 
       <Reveal variant="image" className="mt-14 overflow-hidden rounded-lg">
         <Image
-          src="/images/architecture-street.png"
+          src="/images/architecture-street.webp"
           alt="Улица современных резиденций Малое Исаково"
           width={1600}
           height={900}

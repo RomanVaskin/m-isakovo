@@ -21,7 +21,7 @@ export function Infrastructure() {
       <div className="mt-14 grid gap-8 lg:grid-cols-12 lg:gap-10">
         <Reveal variant="image" className="overflow-hidden rounded-lg lg:col-span-7">
           <Image
-            src="/images/club-complex.png"
+            src="/images/club-complex.webp"
             alt="Клубный комплекс посёлка Малое Исаково"
             width={1200}
             height={900}

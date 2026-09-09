@@ -6,7 +6,7 @@ export function Lifestyle() {
     <section className="relative overflow-hidden">
       <div className="relative min-h-[80vh] w-full">
         <Image
-          src="/images/lifestyle-terrace.png"
+          src="/images/lifestyle-terrace.webp"
           alt="Терраса резиденции с зоной отдыха на закате"
           fill
           sizes="100vw"

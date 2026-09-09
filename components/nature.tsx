@@ -8,7 +8,7 @@ export function Nature() {
       <div className="grid md:grid-cols-2">
         <div className="relative min-h-[60vh] overflow-hidden md:min-h-full">
           <Image
-            src="/images/nature-water.png"
+            src="/images/nature-water.webp"
             alt="Истринское водохранилище в окружении леса на рассвете"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"

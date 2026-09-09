@@ -1,4 +1,4 @@
-import { MapPin } from "lucide-react"
+import Image from "next/image"
 import { Reveal } from "@/components/reveal"
 
 const facts = [
@@ -40,25 +40,13 @@ export function Location() {
 
           <div className="md:col-span-7">
             <Reveal variant="image" className="relative aspect-square overflow-hidden rounded-lg border border-border bg-secondary md:aspect-4/3">
-              <div
-                className="absolute inset-0 opacity-60"
-                style={{
-                  backgroundImage:
-                    "linear-gradient(to right, var(--border) 1px, transparent 1px), linear-gradient(to bottom, var(--border) 1px, transparent 1px)",
-                  backgroundSize: "48px 48px",
-                }}
-                aria-hidden="true"
+              <Image
+                src="/images/location-map.webp"
+                alt="Схема расположения посёлка Малое Исаково на Истринском водохранилище"
+                fill
+                sizes="(max-width: 768px) 100vw, 58vw"
+                className="object-cover"
               />
-              <div className="absolute left-1/2 top-1/2 h-40 w-40 -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/10" />
-              <div className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-3 text-center">
-                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-accent text-accent-foreground">
-                  <MapPin className="h-6 w-6" />
-                </span>
-                <span className="font-display text-xl font-medium text-foreground">Малое Исаково</span>
-                <span className="max-w-xs text-pretty text-sm leading-relaxed text-muted-foreground">
-                  Истринское водохранилище. Точная схема проезда — в презентации проекта.
-                </span>
-              </div>
             </Reveal>
           </div>
         </div>

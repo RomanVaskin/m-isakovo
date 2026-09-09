@@ -42,8 +42,8 @@ export function SiteFooter() {
                   {site.email}
                 </a>
               </li>
-              <li className="text-background/60">{site.domain}</li>
             </ul>
+            <p className="mt-5 max-w-xs text-pretty text-sm leading-relaxed text-background/60">{site.address}</p>
           </div>
         </div>
 

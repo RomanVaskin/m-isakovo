@@ -15,11 +15,11 @@ export function ShellSpec() {
               delay={80}
               className="mt-6 text-balance font-display text-3xl font-medium leading-tight tracking-tight text-foreground sm:text-4xl md:text-5xl"
             >
-              «Тёплый контур» с благоустройством
+              Две комплектации: «Тёплый контур» и «Предчистовая»
             </Reveal>
             <Reveal as="p" delay={140} className="mt-6 text-pretty leading-relaxed text-muted-foreground">
-              Дом передаётся с подготовленными коммуникациями, фасадом, ограждением и монолитным
-              благоустройством участка — готовый к чистовой отделке.
+              Дом передаётся с подготовленными коммуникациями, ограждением и монолитным благоустройством
+              участка — на выбор чёрновая или предчистовая отделка.
             </Reveal>
           </div>
 

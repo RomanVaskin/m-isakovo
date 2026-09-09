@@ -7,8 +7,8 @@ export function FinalCta() {
     <section className="relative overflow-hidden">
       <div className="relative min-h-[70vh] w-full">
         <Image
-          src="/images/house-c.png"
-          alt="Резиденция Малое Исаково на закате"
+          src="/images/final-cta.webp"
+          alt="Крытая терраса резиденции Малое Исаково с видом на лес"
           fill
           sizes="100vw"
           className="object-cover"

@@ -5,7 +5,6 @@ import { Concept } from "@/components/concept"
 import { Nature } from "@/components/nature"
 import { Architecture } from "@/components/architecture"
 import { Houses } from "@/components/houses"
-import { FloorPlans } from "@/components/floor-plans"
 import { MasterPlan } from "@/components/master-plan"
 import { Infrastructure } from "@/components/infrastructure"
 import { ShellSpec } from "@/components/shell-spec"
@@ -26,7 +25,6 @@ export default function Page() {
         <Nature />
         <Architecture />
         <Houses />
-        <FloorPlans />
         <MasterPlan />
         <Infrastructure />
         <ShellSpec />
